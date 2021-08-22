@@ -1,6 +1,4 @@
-// I used these videos as an initial reference
-// https://www.youtube.com/watch?v=xwwl8TgkwgU
-// https://www.youtube.com/watch?v=_WpQpLL49y0
+
 
 #include <iostream>
 #include <fstream>
@@ -84,7 +82,7 @@ void readOutputFile(int choice)
 	if (scoreFile.is_open())
 	{
 		string line;
-		while (getline(scoreFile,line))
+		while (getline(scoreFile, line))
 		{
 			scoreFile >> line;
 			if (line == "X")
@@ -131,10 +129,10 @@ void onePlayer()
 	while (true)
 	{
 		n++;	// Counter variable
-		playerInput();		
+		playerInput();
 		computerDefendMove();
 		displayBoard();
-		if (win() == 'X')	
+		if (win() == 'X')
 		{
 			result = "X";	// The winner is X, the result will get stored and written
 			writeOutputFile(result);
